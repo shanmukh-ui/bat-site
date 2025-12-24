@@ -1,0 +1,131 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background: #050505;
+  color: #e0e0e0;
+}
+
+/* NAV */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 12px 6%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0,0,0,0.75);
+  z-index: 100;
+}
+
+.logo {
+  letter-spacing: 3px;
+  font-size: 1rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #aaa;
+  font-size: 0.9rem;
+}
+
+nav a:hover {
+  color: #fff;
+}
+
+/* HERO */
+.hero {
+  height: 100vh;
+  background: url("images/hero1.jpg") center/cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 8%;
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+  letter-spacing: 3px;
+}
+
+.hero p {
+  margin-top: 10px;
+  color: #bbb;
+}
+
+/* BIOGRAPHY */
+.bio {
+  padding: 90px 8% 60px;
+  background: #0b0b0b;
+}
+
+.bio h2 {
+  margin-bottom: 15px;
+  border-left: 4px solid #444;
+  padding-left: 10px;
+}
+
+.bio p {
+  margin-bottom: 15px;
+  line-height: 1.6;
+  color: #ccc;
+}
+
+/* GALLERY */
+.gallery {
+  padding: 30px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+}
+
+.gallery img {
+  width: 100%;
+  border-radius: 8px;
+  filter: grayscale(40%);
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 20px;
+  color: #666;
+}
+
+/* 🌧️ RAIN */
+.rain {
+  position: fixed;
+  top: -10px;
+  width: 1px;
+  height: 20px;
+  background: rgba(255,255,255,0.2);
+  animation: fall linear infinite;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(110vh);
+  }
+}
+
+/* 📱 MOBILE OPTIMIZATION */
+@media (min-width: 768px) {
+  .hero h2 {
+    font-size: 3rem;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
